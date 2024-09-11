@@ -9,6 +9,11 @@ include colors.conf
 #: individual font faces and even specify special fonts for particular
 #: characters.
 
+font_family      Iosevka Term
+bold_font        Iosevka Term Medium
+italic_font      Iosevka Term Italic
+bold_italic_font Iosevka Term Medium Italic
+
 # font_family MesloLGS NF
 # bold_font        auto
 # italic_font      auto
@@ -143,12 +148,10 @@ font_size 18
 #: }}}
 
 #: Cursor customization {{{
-
-#cursor #cccccc
+# cursor #cccccc
 
 #: Default cursor color
-
-#cursor_text_color #111111
+# cursor_text_color #111111
 
 #: Choose the color of text under the cursor. If you want it rendered
 #: with the background color of the cell underneath instead, use the
@@ -218,7 +221,7 @@ scrollback_lines 2000
 
 #: Mouse {{{
 
-# mouse_hide_wait 3.0
+mouse_hide_wait -1
 
 #: Hide mouse cursor after the specified number of seconds of the
 #: mouse not being used. Set to zero to disable mouse cursor hiding.
@@ -227,7 +230,7 @@ scrollback_lines 2000
 #: robustly with the ever-changing sea of bugs that is Cocoa is too
 #: much effort.
 # url_color #0087bd
-url_style single
+# url_style single
 
 #: The color and style for highlighting URLs on mouse-over. url_style
 #: can be one of: none, single, double, curly
@@ -319,7 +322,7 @@ url_style single
 #: in full screen programs that redraw the entire screen on each loop,
 #: because kitty is so fast that partial screen updates will be drawn.
 
-# sync_to_monitor yes
+sync_to_monitor yes
 
 #: Sync screen updates to the refresh rate of the monitor. This
 #: prevents tearing (https://en.wikipedia.org/wiki/Screen_tearing)
@@ -488,7 +491,7 @@ enable_audio_bell yes
 
 #: The margin to the left and right of the tab bar (in pts)
 
-# tab_bar_style fade
+tab_bar_style powerline
 
 #: The tab bar style, can be one of: fade, separator, powerline, or
 #: hidden. In the fade style, each tab's edges fade into the
@@ -668,7 +671,7 @@ enable_audio_bell yes
 
 #: Advanced {{{
 
-# shell .
+shell .
 
 #: The shell program to execute. The default value of . means to use
 #: whatever shell is set as the default shell for the current user.
@@ -676,7 +679,7 @@ enable_audio_bell yes
 #: --login to ensure that the shell starts in interactive mode and
 #: reads its startup rc files.
 
-# editor .
+editor .
 
 #: The console editor to use when editing the kitty config file or
 #: similar tasks. A value of . means to use the environment variables
@@ -1188,6 +1191,6 @@ term xterm-256color
 
 
 # BEGIN_KITTY_THEME
-# Gruvbox Dark Hard
+# IR Black
 include current-theme.conf
 # END_KITTY_THEME
